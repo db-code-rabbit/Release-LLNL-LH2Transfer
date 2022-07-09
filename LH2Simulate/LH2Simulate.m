@@ -14,11 +14,6 @@ function data = LH2Simulate(name)
 %===-----------------------------------------------------------------------===
 
 
-%% 
-%%   
- %IFmodificationIs =AddedMinorCorrections(); %Added by DB
-%%
-
 try
 	P = evalin('base','LH2Model');
 catch ME

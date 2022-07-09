@@ -11,7 +11,7 @@ A post-processing file, named plotHeatTransfer.m is used in runNominal.m file, h
 
 For this release of the LH2TS code, a folder named TESTFUNCS was also created, and in which the following files are located :
 -	AddedMinorCorrections.m : which activates or deactivates corrected the Nusselt number expressions
--	VerticalPlates.m : gives different types of correlations from the literature for the natural flow along a vertical wall, and is called in LH2Simulate.m
+-	VerticalPlates.m : gives various coorelation expressions from the literature for the natural flow along a vertical wall, and is called in LH2Simulate.m
 -	plotHeatTransfer.m  : post-processing of heat transfer results in external tank (ET)
 
 Another folder named REFPROP has been created where the user has to place the different files for linking REFPROP with MATLAB, make sure to follow instructions that can be found online, such as http://trc.nist.gov/refprop/LINKING/Linking.htm (last accessed 12/7/2017)

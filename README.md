@@ -5,7 +5,7 @@ These modifications concern only the file LH2Simulate.m, in which, the expressio
 
 # Description of the files and folders
 
-The new release of LH2Simulate.m uses a function, named AddedMinorCorrections.m, which activates or deactivate the different Nusselt number corrections proposed.
+This release of LH2Simulate.m uses a function, named AddedMinorCorrections.m, which activates or deactivate the different Nusselt number corrections proposed.
 
 A post-processing file, named plotHeatTransfer.m is used in runNominal.m file, has also been created to display the results of the heat transfers in the external tank (ET)
 

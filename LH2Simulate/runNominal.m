@@ -7,8 +7,8 @@ close all;
 tic;
 
 % 0. Directories of refpropm libraries and the testfuncs folder...
-addpath(strcat(pwd,'\..\refprop'));
-addpath(strcat(pwd,'\..\testfuncs'));
+addpath(strcat(pwd,'\..\refprop')); % Added by DB
+addpath(strcat(pwd,'\..\testfuncs')); % Added by DB
 
 % 1. initialize parameters
 inputs_TrailerToDewar;

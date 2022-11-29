@@ -53,8 +53,7 @@ LH2Model.nV2 = 4;					% [] ET grid size (vapor)
 LH2Model.tminV2 = 0.1;				% [s] ET grid time constant (vapor)
 
 %% Initial conditons (ST)
-%LH2Model.p10 = 14.7*psiToPa;        % [Pa] initial pressure !! VALUE SHOULD BE BELOW PRESSURE RATING OR CRITICAL PRESSURE (186 psia), WHICHEVER IS LOWEST !!
-LH2Model.p10 = 60*psiToPa;        % [Pa] initial pressure !! VALUE SHOULD BE BELOW PRESSURE RATING OR CRITICAL PRESSURE (186 psia), WHICHEVER IS LOWEST !!
+LH2Model.p10 = 14.7*psiToPa;        % [Pa] initial pressure !! VALUE SHOULD BE BELOW PRESSURE RATING OR CRITICAL PRESSURE (186 psia), WHICHEVER IS LOWEST !!
 LH2Model.TL10 = 20;                 % [K] initial liquid temperature
 LH2Model.totalmass10 = 2000;        % [kg] estimated inital total mass (liquid + vapor) !! MAKE SURE YOU DON'T EXCEED CAPACITY AT LIQUID DENSITY: HERE ~ 4000 kg !!
 LH2Model.Tv10 = 0.1+(-1.603941638811E-11*(LH2Model.p10/psiToPa)^6 + 7.830478134841E-09*(LH2Model.p10/psiToPa)^5 - 1.549372675881E-06*(LH2Model.p10/psiToPa)^4 + 1.614567978153E-04*(LH2Model.p10/psiToPa)^3 - 9.861776990784E-03*(LH2Model.p10/psiToPa)^2 + 4.314905904166E-01*(LH2Model.p10/psiToPa)^1 + 1.559843335080E+01); % saturation temperature of vapor, from Refprop
@@ -66,8 +65,7 @@ LH2Model.mL10 = LH2Model.rhoL10 * (LH2Model.VTotal1 - LH2Model.Vullage10);      
 LH2Model.mv10 = LH2Model.totalmass10 - LH2Model.mL10;                              % [kg] initial vapor mass in ST
 
 %% Initial conditions (ET)
-%LH2Model.p20 = 30*psiToPa;			% [Pa] initial pressure !! VALUE SHOULD BE BELOW PRESSURE RATING OR CRITICAL PRESSURE (186 psia), WHICHEVER IS LOWEST !!
-LH2Model.p20 = 45*psiToPa;			% [Pa] initial pressure !! VALUE SHOULD BE BELOW PRESSURE RATING OR CRITICAL PRESSURE (186 psia), WHICHEVER IS LOWEST !!
+LH2Model.p20 = 30*psiToPa;			% [Pa] initial pressure !! VALUE SHOULD BE BELOW PRESSURE RATING OR CRITICAL PRESSURE (186 psia), WHICHEVER IS LOWEST !!
 LH2Model.Tv20 = 0.1+(-1.603941638811E-11*(LH2Model.p20/psiToPa)^6 + 7.830478134841E-09*(LH2Model.p20/psiToPa)^5 - 1.549372675881E-06*(LH2Model.p20/psiToPa)^4 + 1.614567978153E-04*(LH2Model.p20/psiToPa)^3 - 9.861776990784E-03*(LH2Model.p20/psiToPa)^2 + 4.314905904166E-01*(LH2Model.p20/psiToPa)^1 + 1.559843335080E+01); % saturation temperature of vapor, from Refprop
 LH2Model.TL20 = 20.4;				% [K] initial liquid temperature
 LH2Model.Tw20 = 21;					% [K] initial wall temperature     

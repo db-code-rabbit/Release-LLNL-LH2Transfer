@@ -1,7 +1,7 @@
 # Release LH2 Transfer Simulation
 
 This release proposes minor modifications of the LH2TS (for "LH2 Transfer Simulation") code developed and published online such as https://github.com/LLNL/LH2Transfer.
-These modifications only concern the file LH2Simulate.m, in which the expressions of the Nusselt number used to calculate the thermal exchanges, walls/fluids (liquid phase and gas phase) inside the external tank (ET) have been corrected. 
+These modifications only concern the file LH2Simulate.m, in which the expressions of the Nusselt number used to calculate the heat exchanges, walls/fluids (liquid phase and gas phase) inside the external tank (ET) have been corrected. 
 
 # Description of the files and folders
 

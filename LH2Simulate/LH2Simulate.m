@@ -477,7 +477,7 @@ function dxdt = LH2dxdt(P,t,x)
 
     % 
     % set up grid for vapor in ST (count from interface to top)
-    lmin = sqrt(P.kappa_v*P.tminV1/P.c_v/rhov1);
+    lmin = sqrt(P.kappa_v*P.tminV1/P.cv_v/rhov1);
     l_V1(1) = lmin/(1+exp(pi/2/sqrt(P.nV1)));			% h_0
     l12_V1(1) = lmin;									% h_1/2
     for i=2:P.nV1

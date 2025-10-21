@@ -40,20 +40,40 @@ end
 %%
 %%
 %
+% function state = getSTVentState(P,p1,threshold)
+%    % determine ST vent valve state
+%    if p1 < threshold+0.05*threshold
+%	    % turn off valve
+%	    state = 0;
+%    elseif p1 >threshold-0.05*threshold 
+%	    % turn on valve
+%	    state = 1;
+%    else
+%	    % stays at same value
+%	    state = P.STVentState;
+%    end
+%end
+% ==============
+% DB's Comments:
+% There is a problem in the original version of the getSTVentState function above:
+% The vent valve operates opposite to intended behavior, causing potential over-pressurization.
+% if p1 < threshold + 0.05*threshold
+%      state = 0;  % Closes vent when pressure is LOW
+% elseif p1 > threshold - 0.05*threshold
+%      state = 1;  % Opens vent when pressure is BELOW setpoint
+%
+% ============= Here's below the corrected version of getSTVentedState
 function state = getSTVentState(P,p1,threshold)
     % determine ST vent valve state
-    if p1 < threshold+0.05*threshold
-	    % turn off valve
-	    state = 0;
-    elseif p1 >threshold-0.05*threshold 
-	    % turn on valve
-	    state = 1;
+    if p1 < threshold - 0.05 * threshold    
+	    state = 0; % turn off valve
+    elseif p1 >threshold + 0.05 * threshold     
+	    state = 1; % turn on valve
     else
 	    % stays at same value
 	    state = P.STVentState;
     end
 end
-
 %%
 %%
 %
@@ -86,4 +106,5 @@ function state = getVaporizerValveState(P,p1,pSet)
 	    state = P.VapValveState;
     end
 end
+
 %%  %%%%
